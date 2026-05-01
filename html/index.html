@@ -12,16 +12,23 @@
     <link rel="stylesheet" href="../css/style.css" />
 
     <!-- font awesome (icons) -->
+     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
-
+    
     <!--========goagle fonts=======-->
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+     <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
   </head>
+
   <body data-bs-spy="scroll" data-bs-target=".navbar" data-bs-offset="70">
+
+    <!-- =======start navber====== -->
     <header>
       <nav class="navbar navbar-expand-lg bg-dark navbar-dark fixed-top my-nav ">
         <div class="container">
             <div class="logo">
-             <i class="fa-solid fa-octagon fs-3 icon"></i>
+             <i class="bi bi-pentagon-fill fs-3 icon"></i>
              <a class="navbar-brand fw-bold fs-3 " href="#">OSAKA</a>
             </div>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -46,6 +53,51 @@
         </div>
       </nav>
     </header>
+
+     <!-- =======end navber======-->
+     <!--========start hero======-->
+
+     <section  class="hero position-relative">
+        <div class="container vh-100 d-flex align-items-center justify-content-start gap-3">
+              <div class="row flex-column g-lg-4 g-md-4 g-sm-3 g-2 ">
+                <div class="col-4 hero-social1"><a class="btn btn-outline-light rounded-circle d-flex justify-content-center align-items-center hero-social" style="width:40px; height:40px;" href="#" ><i class="bi bi-facebook fs-6 "></i></a></div>
+                <div class="col-4 hero-social2"><a class="btn btn-outline-light rounded-circle d-flex justify-content-center align-items-center hero-social" style="width:40px; height:40px;" href="#"><i class="bi bi-whatsapp fs-6"></i></a></div>
+                <div class="col-4 hero-social3"><a class="btn btn-outline-light rounded-circle d-flex justify-content-center align-items-center hero-social" style="width:40px; height:40px;" href="#"><i class="bi bi-github fs-5 "></i></a></div>
+                <div class="col-4 hero-social4"><a class="btn btn-outline-light rounded-circle d-flex justify-content-center align-items-center hero-social" style="width:40px; height:40px;" href="#"><i class="bi bi-linkedin fs-6"></i></a></div>
+              </div>
+             <hr class="space bg-white" style="width: 2px; height: 390px;">
+            <div class="hero-content">
+            <div class=" hero-badg d-inline-flex align-items-center gap-2 bg-transparent border border-1 border-white text-white rounded-5 mb-3">
+              <span class="dott d-block rounded-circle " style="width: 7px; height: 7px;"></span>
+              <span class=" hero-badg-content fw-bold ">Available for work</span>
+            </div>
+            <h1 class="hero__title fw-bold  ">
+              HI, I'm <br> 
+              <span>ROBIN STEEL</span>
+            </h1>
+            <h2 class="hero-word position-relative fs-4 text-white fw-bolder mb-lg-5 mb-md-4 mb-sm-3 mb-3" style="width: 50px; height: 50px;">
+              <span class="fs " style="animation:fadeUp 0.9s 0.4s ease both;" >I'm</span> <br>
+              <span class="word word1 position-absolute start-0">Developer</span>
+              <span class="word word2 position-absolute">Designer</span>
+              <span class="word word3 position-absolute">Freelancer</span>
+           </h2>
+                <div class="hero__btns d-flex gap-3 flex-lg-wrap flex-md-wrap" style="width: 100%;"> 
+                  <a href="" class=" btn-contact btn col-lg-4 col-md-5 col-sm-6 col-5 btn-outline-light rounded-4 p-3">Contact Me</a>
+                  <a href="" class=" btn-Portfolio btn col-lg-4 col-md-5 col-sm-6 btn-outline-light rounded-4 p-3">View Portfolio</a>
+                </div>
+
+
+               <div class="hero__scroll position-absolute d-flex flex-column align-items-center gap-1  start-50 translate-middle-x" style="animation:fadeUp 0.9s 0.5s ease both;">
+                <span class="hero__scroll-text fw-light">SCROLL DOWN</span>
+                <div class="hero__scroll-line"></div>
+               </div>
+          </div>
+        </div>
+
+     </section>
+
+      <!--========end hero======-->
+
 
     <!--======link-js======== -->
     <script src="../js/bootstrap.bundle.min.js"></script>
