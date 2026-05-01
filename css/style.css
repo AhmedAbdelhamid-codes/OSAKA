@@ -92,6 +92,7 @@ html{
 .my-nav .nav-link.active{
     color: #FF205A;
     position: relative;
+    font-weight: bold;
 }
 
 .my-nav .nav-link.active::after{
@@ -109,13 +110,13 @@ html{
     position: relative;
 }
 
-.my-nav .nav-link:hover{
+.my-nav .nav-link:not(.active):hover{
     color: var(--main-text-p);
     
 }
 
-.my-nav .nav-link:after,
-.my-nav .nav-link::before{
+.my-nav .nav-link:not(.active):after,
+.my-nav .nav-link:not(.active):before{
   content: " ";
   position: absolute;
   bottom: 6px;
@@ -132,8 +133,8 @@ html{
  right: 50%;
 }
 
-.my-nav .nav-link:hover::after,
-.my-nav .nav-link:hover::before
+.my-nav .nav-link:not(.active):hover::after,
+.my-nav .nav-link:not(.active):hover::before
 {
   width: 50%;
 }
@@ -314,4 +315,170 @@ html{
  .hero .hero-content .hero__scroll{
     bottom: 0%;
  }
+}
+
+ /*========end hero======*/
+  /*========start about======*/
+
+.about .about-header .about-header-tittle{
+    font-size: clamp(2.5rem, 6vw, 4rem);
+    animation:fadeUp 0.8s 0.2s ease both;
+}
+
+.about .about-header .about-header-tittle.back{
+ color: rgba(0, 0, 0, 0.192);
+ letter-spacing: 8px;
+}
+
+.about .about-header .about-header-tittle.front{
+ color: rgb(0, 0, 0);
+ letter-spacing: 2px;
+}
+
+.about .imge{
+    box-shadow: 0px 0px 80px var(--secondary-text-p);
+    animation:fadeUp 0.8s 0.4s ease both;
+}
+
+.about .imge img{
+ transition: var(--hover-trans);
+ box-shadow: 0px 0px 80p var(--secondary-text-p);
+ 
+}
+
+.about .imge img:hover{
+    transform: scale(1.1);
+}
+
+.about .about-content .name{
+    font-size: clamp(2rem, 4vw, 3rem);
+    line-height: 0.9;
+    animation:fadeUp 0.8s 0.4s ease both;
+}
+
+.about .about-content .about-word .word{
+    opacity: 0;
+    animation: changeWord 9s linear infinite;
+}
+
+.about .about-content .about-word .word1{
+    animation-delay: 0s;
+}
+.about .about-content .about-word .word2{
+    animation-delay: 3s;
+}
+.about .about-content .about-word .word3{
+    animation-delay: 6s;
+}
+
+@keyframes changeWord{
+    0%{
+        opacity: 0;
+        transform: translateX(-20%);
+    }
+    10%{
+        opacity: 1;
+        transform: translateX(0%);
+    }
+    30%{
+        opacity: 1;
+        transform: translateX(0%);
+    }
+    40%{
+        opacity: 0;
+        transform: translateX(100%);
+    }
+    100%{
+        opacity: 0;
+        transform: translateX(100%);
+    }
+}
+
+.about .about-content .about-word .word2 .ui{
+    color: var(--btn-color);
+}
+
+.about .about-content .about-btns{
+  animation:fadeUp 1s 0.6s ease both;
+}
+
+.about .about-content .about-btns .cv{
+    background-color: var(--secondary-text-p);
+    color: var(--main-text-p);
+    border-radius: 20px 0px;
+    transition: var(--hover-trans);
+}
+
+.about .about-content .about-btns .cv:hover{
+    transform: translateY(-2px);
+    box-shadow: 0px 0px 150px var(--secondary-text-p);
+}
+
+.about .about-content .about-btns .email{
+    background: transparent;
+    border: 1px solid var(--secondary-text-p);
+    border-radius: 20px 0px;
+    transition: var(--hover-trans);
+}
+ 
+.about .about-content .about-btns .email:hover{
+    color: var(--secondary-text-p);
+    transform: translateY(-3px);
+}
+
+/*========end about====== */
+/*========start Testmonial====== */
+
+.testmonial{
+    background-color: var(--secondary-color-bg);
+}
+
+.testmonial .testmonial-header .testmonial-header-tittle{
+    font-size: clamp(2.5rem, 6vw, 4rem);
+    animation:fadeUp 0.8s 0.2s ease both;
+}
+
+.testmonial .testmonial-header .testmonial-header-tittle.back{
+ color: rgba(0, 0, 0, 0.192);
+ letter-spacing: 8px;
+}
+
+.testmonial .testmonial-header .testmonial-header-tittle.front{
+ color: rgb(0, 0, 0);
+ letter-spacing: 2px;
+}
+
+.testmonial .team-imge img{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    transform: translateY(50%);
+}
+
+.testmonial .team-content h2{
+    font-size: 20px;
+    font-weight: 500;
+    position: relative;
+}
+
+.testmonial .team-content h2::after{
+    content: " ";
+    position: absolute;
+    bottom: -9px;
+    left: 46%;
+    width: 8%;
+    height: 2px;
+    background-color: var(--secondary-text-p);
+}
+
+.testmonial .team-content h3{
+    font-size: 15px;
+    color: var(--secondary-text-p);
+    line-height: 2;
+}
+
+.testmonial .carousel-indicators [data-bs-target]{
+ width: 50px;
+ height: 50px;
+ text-indent: 0;
 }
