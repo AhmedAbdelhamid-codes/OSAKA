@@ -317,7 +317,7 @@ body{
 
 @media(min-width: 100px) and (max-width: 990px){
  .hero .hero-content .hero__scroll{
-    bottom: -1%;
+    bottom: 5px;
  }
 }
 
