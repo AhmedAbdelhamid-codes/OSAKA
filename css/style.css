@@ -176,6 +176,7 @@ body{
 .hero-social2{animation: fadeUp 0.8s 0.3s ease both;}
 .hero-social3{animation: fadeUp 0.9s 0.4s ease both;}
 .hero-social4{animation: fadeUp 0.9s 0.5s ease both;}
+.hero-social5{animation: fadeUp 0.9s 0.6s ease both;}
 
 .hero-social:hover {
   transform: translatex(-3px);
@@ -241,11 +242,11 @@ body{
     }
     40%{
         opacity: 0;
-        transform: translateX(100%);
+        transform: translateX(10%);
     }
     100%{
         opacity: 0;
-        transform: translateX(100%);
+        transform: translateX(10%);
     }
 }
 
@@ -316,7 +317,7 @@ body{
 
 @media(min-width: 100px) and (max-width: 990px){
  .hero .hero-content .hero__scroll{
-    bottom: 0%;
+    bottom: -1%;
  }
 }
 
@@ -361,7 +362,30 @@ body{
 
 .about .about-content .about-word .word{
     opacity: 0;
-    animation: changeWord 9s linear infinite;
+    animation: changeWord2 9s linear infinite;
+}
+
+@keyframes changeWord2{
+    0%{
+        opacity: 0;
+        transform: translateX(-20%);
+    }
+    10%{
+        opacity: 1;
+        transform: translateX(0%);
+    }
+    30%{
+        opacity: 1;
+        transform: translateX(0%);
+    }
+    40%{
+        opacity: 0;
+        transform: translateX(30%);
+    }
+    100%{
+        opacity: 0;
+        transform: translateX(30%);
+    }
 }
 
 .about .about-content .about-word .word1{
@@ -422,6 +446,8 @@ body{
     border: 1px solid var(--secondary-text-p);
     border-radius: 20px 0px;
     transition: var(--hover-trans);
+    word-break: break-all;
+
 }
  
 .about .about-content .about-btns .email:hover{
@@ -581,4 +607,26 @@ body{
 .services .card .overlay .ghost:hover{
     border: 2px solid var(--btn-color);
     box-shadow: 0 0 0px var(--btn-color);
+}
+
+/*========end Services======*/
+/*========start footer======*/
+
+footer .links .link a {
+    display: block;
+    color: var(--main-text-p);
+    transition: var(--hover-trans);
+}
+
+footer .links .link a:hover{
+    color: var(--btn-color);
+    transform: translateX(-2px);
+}
+
+footer .icons .footer-social{
+    transition: var(--hover-trans);
+}
+
+footer .icons .footer-social:hover{
+    transform: translateX(-2px);
 }
