@@ -13,22 +13,17 @@
 /* End Variables */
 /* start scroll bar */
 
-/* ::-webkit-scrollbar {
+::-webkit-scrollbar {
   width: 10px;
 }
 
 ::-webkit-scrollbar-track {
-  background: #111;
+  background: rgb(186, 181, 173);
 }
 
 ::-webkit-scrollbar-thumb {
-  background: var(--btn-hover);
-  transition: 1s;
+  background: var(--btn-color);
 }
-
-::-webkit-scrollbar-thumb:hover {
-  background: #2563eb;
-} */
 
 /* end scroll bar */
 /* start normalize */
@@ -37,18 +32,32 @@ html{
  scroll-behavior: smooth;
 }
 
+body{
+   font-family: "Rubik", sans-serif;
+   font-optical-sizing: auto;
+}
+
 *, *::before, *::after{
   padding: 0px;
   margin: 0px;
   box-sizing: border-box;
 }
 
-body{
-   font-family: "Rubik", sans-serif;
-   font-optical-sizing: auto;
+/* end normalize */
+/* start fadeup */
+
+@keyframes fadeUp {
+    from { 
+        opacity:0; 
+        transform:translateY(30px); 
+    }
+    to { 
+        opacity:1; 
+        transform:translateY(0); 
+    }
 }
 
-/* end normalize */
+/* end fadeUp */
 /* start header */
 
 .navbar{
@@ -115,7 +124,6 @@ body{
 
 .my-nav .nav-link:not(.active):hover{
     color: var(--main-text-p);
-    
 }
 
 .my-nav .nav-link:not(.active):after,
@@ -142,8 +150,7 @@ body{
   width: 50%;
 }
 
-
-/* responsif for phones */
+/* responsif for tablets and phones */
 @media(min-width: 100px) and (max-width: 991px){
  .my-nav .nav-link.active::after{
     width: 0%;
@@ -184,9 +191,9 @@ body{
 }
 
 .hero .hero-content .hero-badg{
-    padding: 10px 19px;
-    font-size: 0.9rem; 
-    animation:fadeUp .8s .2s ease both;
+ padding: 10px 19px;
+ font-size: 0.9rem; 
+ animation:fadeUp .8s .2s ease both;
 }
 
 .hero .hero-content .hero-badg .dott{
@@ -310,19 +317,15 @@ body{
     }
 }
 
-@keyframes fadeUp {
-      from { opacity:0; transform:translateY(30px); }
-      to   { opacity:1; transform:translateY(0); }
-}
-
+/* responsif for tablets and phones */
 @media(min-width: 100px) and (max-width: 990px){
  .hero .hero-content .hero__scroll{
     bottom: 5px;
  }
 }
 
- /*========end hero======*/
-  /*========start about======*/
+/*========end hero======*/
+/*========start about======*/
 
 .about .about-header .about-header-tittle{
     font-size: clamp(2.5rem, 6vw, 4rem);
@@ -347,7 +350,6 @@ body{
 .about .imge img{
  transition: var(--hover-trans);
  box-shadow: 0px 0px 80p var(--secondary-text-p);
- 
 }
 
 .about .imge img:hover{
@@ -396,29 +398,6 @@ body{
 }
 .about .about-content .about-word .word3{
     animation-delay: 6s;
-}
-
-@keyframes changeWord{
-    0%{
-        opacity: 0;
-        transform: translateX(-20%);
-    }
-    10%{
-        opacity: 1;
-        transform: translateX(0%);
-    }
-    30%{
-        opacity: 1;
-        transform: translateX(0%);
-    }
-    40%{
-        opacity: 0;
-        transform: translateX(100%);
-    }
-    100%{
-        opacity: 0;
-        transform: translateX(100%);
-    }
 }
 
 .about .about-content .about-word .word2 .ui{
@@ -482,7 +461,6 @@ body{
     height: 100px;
     border-radius: 50%;
     transform: translateY(50%);
-    
 }
 
 .testmonial .team-content h2{
@@ -572,6 +550,13 @@ body{
     background-color: rgba(0, 0, 0, 0.5);
     opacity: 0;
     transition: var(--hover-trans);
+    position:absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+    height: 100%;
 }
 
 .services .card:hover .overlay{
@@ -609,6 +594,36 @@ body{
     box-shadow: 0 0 0px var(--btn-color);
 }
 
+/* responsif for tablets and phones */
+@media(min-width: 100px) and (max-width: 768px){
+   .services .card .card-imge .overlay{
+    position: static;
+    opacity: 1;
+    background: none;
+    margin-top: 20px;
+    justify-content: flex-start;
+    margin-left: 16px;
+  }
+  
+  .services .card:hover{
+    transform: none;
+  }
+
+ .services .card .overlay .ghost{
+    background-color:transparent;
+    color: var(--btn-color);
+    border: 2px solid var(--secondary-text-p);
+    transition: var(--hover-trans);
+  }
+
+  .services .card .overlay .ghost:hover{
+    border: 2px solid var(--btn-color);
+    box-shadow: 0 0 0px var(--btn-color);
+  }
+
+}
+
+
 /*========end Services======*/
 /*========start footer======*/
 
@@ -630,3 +645,5 @@ footer .icons .footer-social{
 footer .icons .footer-social:hover{
     transform: translateX(-2px);
 }
+
+/*========end footer======*/
